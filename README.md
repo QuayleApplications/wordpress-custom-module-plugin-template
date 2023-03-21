@@ -12,7 +12,8 @@ This template is just that, a template. It is built to support functionalities t
 * Customize controlled simple shortcode.
 * Example Customizer inputs for most common needs.
 * Php & JavaScript helpers
-* Bootstrap 5.2 CSS
+* Bootstrap 5.2.3 CSS & JS
+* Font Awesome 6.3.0
 * An over all blue print for a simple reusable WordPress plugin
 
 ### Tech ###

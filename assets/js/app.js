@@ -3,4 +3,11 @@ import {getEl, getEls, createEl, getAcfField, getTitleById, sleep } from './help
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log('Hello World');
+
+    let $q = jQuery.noConflict();
+    $q(function(){
+        'use strict';
+
+        console.log('Hello from jQuery');
+    });
 });

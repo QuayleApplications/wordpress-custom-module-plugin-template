@@ -22,6 +22,7 @@ function qcmptLoadScripts() {
     $js_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/app.js' ));
     $css_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/styles.css' ));
 
+    wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js', array(), '5.2.3', true );
     wp_enqueue_script( 'qcmpt-js', plugins_url( 'assets/js/app.js', __FILE__ ), array('jquery', 'bootstrap-js'), $js_ver, true );
    

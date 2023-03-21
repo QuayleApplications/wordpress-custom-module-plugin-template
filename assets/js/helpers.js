@@ -11,7 +11,7 @@ export const getAcfField = async (name, post_id) => {
         data = new URLSearchParams(),
         results;
 
-    data.append('action', 'get_acf_field');
+    data.append('action', 'qcmptGetAcfField');
     data.append( 'nonce', qcmpt_ajax.nonce );
     data.append( 'is_user_logged_in', qcmpt_ajax.is_user_logged_in );
     data.append( 'is_single', qcmpt_ajax.is_single );
@@ -26,7 +26,7 @@ export const getAcfField = async (name, post_id) => {
     .then((response) => response.json())
     .then((data) => results = data)
     .catch((error) => {
-        console.log('get_acf_field Function');
+        console.log('qcmptGetAcfField Function');
         console.error(error);
     });
     
@@ -39,7 +39,7 @@ export const getTitleById = async (post_id) => {
         data = new URLSearchParams(),
         results;
 
-    data.append('action', 'get_title_by_id');
+    data.append('action', 'qcmptGetTitleById');
     data.append( 'nonce', qcmpt_ajax.nonce );
     data.append( 'is_user_logged_in', qcmpt_ajax.is_user_logged_in );
     data.append( 'is_single', qcmpt_ajax.is_single );
@@ -53,7 +53,7 @@ export const getTitleById = async (post_id) => {
     .then((response) => response.json())
     .then((data) => results = data)
     .catch((error) => {
-        console.log('get_title_by_id Function');
+        console.log('qcmptGetTitleById Function');
         console.error(error);
     });
     

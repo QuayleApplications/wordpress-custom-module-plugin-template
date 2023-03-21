@@ -14,31 +14,31 @@ function qcmptRegisterSettingsPanel( $wp_customize ) {
     //Settings
     if($wp_customize->get_panel('qcmpt_settings') !== '') {
         $wp_customize->add_panel('qcmpt_settings', array(
-            'title' => PLUGIN_NAME.' Settings',
+            'title' => QCMPT_PLUGIN_NAME.' Settings',
             'priority' => 120,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'description' => PLUGIN_NAME.' Settings'
+            'description' => QCMPT_PLUGIN_NAME.' Settings'
         ));
     }
 
 	//Headers & Content
 	$wp_customize->add_section('qcmpt_headers_content', array(
-        'title' => __( 'Headers & Content', TEXT_DOMAIN ),
+        'title' => __( 'Headers & Content', QCMPT_TEXT_DOMAIN ),
         'priority' => 10,
         'panel' => 'qcmpt_settings'
 	));
 
 	//Constants
 	$wp_customize->add_section('qcmpt_constants', array(
-        'title' => __( 'Constants', TEXT_DOMAIN ),
+        'title' => __( 'Constants', QCMPT_TEXT_DOMAIN ),
         'priority' => 10,
         'panel' => 'qcmpt_settings'
 	));
 
 	//UI/UX
 	$wp_customize->add_section('qcmpt_uiux', array(
-        'title' => __( 'UI/UX', TEXT_DOMAIN ),
+        'title' => __( 'UI/UX', QCMPT_TEXT_DOMAIN ),
         'priority' => 10,
         'panel' => 'qcmpt_settings'
 	));
@@ -63,8 +63,8 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => 'qcmptSanitizeNohtml'
     ));
     $wp_customize->add_control( 'qcmpt_text', array(
-        'label'   => __( 'Text Input', TEXT_DOMAIN ),
-        'description' => __( 'This is a Text Input', TEXT_DOMAIN ),
+        'label'   => __( 'Text Input', QCMPT_TEXT_DOMAIN ),
+        'description' => __( 'This is a Text Input', QCMPT_TEXT_DOMAIN ),
         'section'  => 'qcmpt_headers_content',
         'type'    => 'text',
     ));
@@ -78,8 +78,8 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => 'qcmptSanitizeNohtml'
     ));
     $wp_customize->add_control( 'qcmpt_textarea', array(
-        'label'   => __( 'Textarea', TEXT_DOMAIN ),
-        'description' => __( 'This is a Textarea', TEXT_DOMAIN ),
+        'label'   => __( 'Textarea', QCMPT_TEXT_DOMAIN ),
+        'description' => __( 'This is a Textarea', QCMPT_TEXT_DOMAIN ),
         'section'  => 'qcmpt_headers_content',
         'type'    => 'textarea',
     ));
@@ -93,8 +93,8 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => 'qcmptSanitizeEmail'
     ));
     $wp_customize->add_control( 'qcmpt_email', array(
-        'label'   => __( 'Email', TEXT_DOMAIN ),
-        'description' => __( 'This is an email input', TEXT_DOMAIN ),
+        'label'   => __( 'Email', QCMPT_TEXT_DOMAIN ),
+        'description' => __( 'This is an email input', QCMPT_TEXT_DOMAIN ),
         'section'  => 'qcmpt_headers_content',
         'type'    => 'email',
     ));
@@ -108,8 +108,8 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => 'qcmptSanitizeUrl'
     ));
     $wp_customize->add_control( 'qcmpt_url', array(
-        'label'   => __( 'URL', TEXT_DOMAIN ),
-        'description' => __( 'This is an url input', TEXT_DOMAIN ),
+        'label'   => __( 'URL', QCMPT_TEXT_DOMAIN ),
+        'description' => __( 'This is an url input', QCMPT_TEXT_DOMAIN ),
         'section'  => 'qcmpt_headers_content',
         'type'    => 'url',
     ));
@@ -123,8 +123,8 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => 'qcmptSanitizeNumberRange'
     ));
     $wp_customize->add_control( 'qcmpt_tel', array(
-        'label'   => __( 'Telephone Number', TEXT_DOMAIN ),
-        'description' => __( 'This is a tel input', TEXT_DOMAIN ),
+        'label'   => __( 'Telephone Number', QCMPT_TEXT_DOMAIN ),
+        'description' => __( 'This is a tel input', QCMPT_TEXT_DOMAIN ),
         'section'  => 'qcmpt_headers_content',
         'type'    => 'tel',
     ));
@@ -144,8 +144,8 @@ function qcmptFieldRegister( $wp_customize ) {
     $wp_customize->add_control('qcmpt_range', array(
         'type' => 'range',
         'section' => 'qcmpt_constants',
-        'label' => __( 'Range', TEXT_DOMAIN ),
-        'description' => __( 'This is the range control description.', TEXT_DOMAIN ),
+        'label' => __( 'Range', QCMPT_TEXT_DOMAIN ),
+        'description' => __( 'This is the range control description.', QCMPT_TEXT_DOMAIN ),
         'input_attrs' => array(
             'min' => 0,
             'max' => 10,
@@ -162,8 +162,8 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => ''
     ));
     $wp_customize->add_control( 'qcmpt_time', array(
-        'label'   => __( 'Time', TEXT_DOMAIN ),
-        'description' => __( 'This is a time input', TEXT_DOMAIN ),
+        'label'   => __( 'Time', QCMPT_TEXT_DOMAIN ),
+        'description' => __( 'This is a time input', QCMPT_TEXT_DOMAIN ),
         'section'  => 'qcmpt_constants',
         'type'    => 'time',
     ));
@@ -177,8 +177,8 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => ''
     ));
     $wp_customize->add_control( 'qcmpt_date', array(
-        'label'   => __( 'Date', TEXT_DOMAIN ),
-        'description' => __( 'This is a date input', TEXT_DOMAIN ),
+        'label'   => __( 'Date', QCMPT_TEXT_DOMAIN ),
+        'description' => __( 'This is a date input', QCMPT_TEXT_DOMAIN ),
         'section'  => 'qcmpt_constants',
         'type'    => 'date',
     ));
@@ -194,12 +194,12 @@ function qcmptFieldRegister( $wp_customize ) {
     $wp_customize->add_control( 'qcmpt_radio', array(
         'type' => 'radio',
         'section' => 'qcmpt_constants',
-        'label' => __( 'Radio Selection', TEXT_DOMAIN ),
-        'description' => __( 'This is a custom radio input.', TEXT_DOMAIN ),
+        'label' => __( 'Radio Selection', QCMPT_TEXT_DOMAIN ),
+        'description' => __( 'This is a custom radio input.', QCMPT_TEXT_DOMAIN ),
         'choices' => array(
-            'red' => __( 'Red', TEXT_DOMAIN ),
-            'blue' => __( 'Blue', TEXT_DOMAIN ),
-            'green' => __( 'Green', TEXT_DOMAIN ),
+            'red' => __( 'Red', QCMPT_TEXT_DOMAIN ),
+            'blue' => __( 'Blue', QCMPT_TEXT_DOMAIN ),
+            'green' => __( 'Green', QCMPT_TEXT_DOMAIN ),
         ),
     ) );
 
@@ -236,7 +236,7 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => 'qcmptSanitizeHexColor'
     ));
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qcmpt_color_control', array(
-        'label' => __( 'Select Color', TEXT_DOMAIN ),
+        'label' => __( 'Select Color', QCMPT_TEXT_DOMAIN ),
         'section' => 'qcmpt_uiux',
     ) ) );
 
@@ -249,7 +249,7 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => 'qcmptSanitizeImage'
     ));
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'qcmpt_image_control', array(
-        'label' => __( 'Image Upload', TEXT_DOMAIN ),
+        'label' => __( 'Image Upload', QCMPT_TEXT_DOMAIN ),
         'section' => 'qcmpt_uiux',
         'mime_type' => 'image',
     ) ) );
@@ -263,8 +263,8 @@ function qcmptFieldRegister( $wp_customize ) {
         'sanitize_callback' => 'qcmptSanitizeCss'
     ));  
     $wp_customize->add_control( 'qcmpt_css', array(
-        'label'   => __( 'Plugin Specific CSS', TEXT_DOMAIN ),
-        'description' => __( '', TEXT_DOMAIN ),
+        'label'   => __( 'Plugin Specific CSS', QCMPT_TEXT_DOMAIN ),
+        'description' => __( '', QCMPT_TEXT_DOMAIN ),
         'section'  => 'qcmpt_uiux',
         'type'    => 'textarea',
     ));  

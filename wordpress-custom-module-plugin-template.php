@@ -14,7 +14,7 @@
 
 defined('ABSPATH') or die();
 define('QCMPT_PLUGIN_NAME', 'WordPress Custom Module Plugin Template');
-define('TEXT_DOMAIN', 'qcmpt');
+define('QCMPT_TEXT_DOMAIN', 'qcmpt');
 
 //Enqueue Scripts
 function qcmptLoadScripts() {
